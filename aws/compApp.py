@@ -30,7 +30,7 @@ def about():
     return render_template('www.tarc.edu.my')
 
 
-@app.route("/jobRegister", methods=['POST'])
+@app.route("/jobRegister", methods=['GET','POST'])
 def jobRegister():
     comp_name = request.form['comp_name']
     job_title = request.form['job_title']
