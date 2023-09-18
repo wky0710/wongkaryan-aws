@@ -22,7 +22,7 @@ table = 'student'
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
-    return render_template('jobRegister.html')
+    return render_template('index.html')
 
 
 @app.route("/about", methods=['POST'])
@@ -31,7 +31,7 @@ def about():
 
 
 @app.route("/jobRegister", methods=['POST'])
-def AddEmp():
+def jobRegister():
     comp_name = request.form['comp_name']
     job_title = request.form['job_title']
     job_desc = request.form['job_desc']
@@ -78,6 +78,7 @@ def AddEmp():
 
     finally:
         cursor.close()
+    return render_template('jobRegister.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)
