@@ -20,8 +20,8 @@ output = {}
 table = 'student'
 
 
-@app.route("/", methods=['GET', 'POST'])
-def home():
+@app.route("/", methods=['GET'], endpoint='index')
+def index():
     return render_template('index.html')
 
 
