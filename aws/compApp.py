@@ -5,8 +5,8 @@ import boto3
 from config import *
 
 app = Flask(__name__)
-app.template_folder = 'aws'
-app.static_folder = 'assets'
+app.template_folder = 'pages'
+app.static_folder = 'static'
 
 bucket = custombucket
 region = customregion
