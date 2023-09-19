@@ -5,7 +5,7 @@ import boto3
 from config import *
 
 app = Flask(__name__)
-app.template_folder = 'pages'
+app.template_folder = 'templates'
 app.static_folder = 'static'
 
 bucket = custombucket
