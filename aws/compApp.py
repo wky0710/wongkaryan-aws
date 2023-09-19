@@ -55,7 +55,7 @@ def contact():
     return render_template('contact.html')
 
 
-@app.route("/jobRegister", methods=['GET','POST'])
+@app.route("/jobRegister", methods=['POST'])
 def jobRegister():
     comp_name = request.form['comp_name']
     job_title = request.form['job_title']
